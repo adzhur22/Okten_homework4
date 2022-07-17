@@ -1,0 +1,141 @@
+.rah{
+    width: 100%;
+    height: 60px;
+    background:khaki ;
+
+}
+
+
+.father{
+    width: 100%;
+    height: 600px;
+    border: 2px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+
+
+.top{
+
+    width: 100%;
+    height: 183px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.bott{
+
+    width: 100%;
+    height: 383px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+
+}
+
+.bcde{
+    width: 75%;
+    height: 100%;
+    border-right: 2px solid black;
+    box-sizing: border-box;
+}
+
+.f{
+    width: 25%;
+    height: 100%;
+    border-left: 2px solid black;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+.b{
+    height: 48.9%;
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.cde{
+    height: 48.9%;
+    width: 100%;
+    border-top: 2px solid black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.c,.d,.e{
+    height: 100%;
+    width: 32.4%;
+    box-sizing: border-box;
+
+}
+
+.c{
+    border-right: 2px solid black;
+
+}
+.d{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+.e{
+    border-left: 2px solid black;
+}
+
+@media screen and (max-width: 600px){
+.bott{
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.bcde,.f{
+    height: 48.9%;
+    width: 100%;
+}
+.f{
+    margin-left: 0;
+    border-left: none;
+    border-top: 2px solid black;
+}
+.cde,.b{
+    height: 47.2%;
+}
+.cde{
+    border-bottom: 2px solid black;
+}
+
+.bcde{
+    border-right: none;
+}
+
+
+}
+
+p, h3, h2, h4{
+ margin: 0;
+
+}
+.rah{
+    display: flex;
+    justify-content: space-between;
+}
+
+.start{
+    width: 100px;
+    height: 30px;
+    background: whitesmoke;
+    margin: 10px 10px;
+
+}
+
+.usl{
+    text-align: center;
+    vertical-align: center;
+
+
+}

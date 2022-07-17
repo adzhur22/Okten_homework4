@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home_work4.2</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main2.css">
+
+</head>
+<body>
+
+<div class="bigfather">
+    <div class="rah">
+
+        <FORM action="javascript:game()">
+            <button class ="start" id="start"><h3>START</h3></button>
+        </FORM>
+        <div class="usl">
+            <h4>Знайдіть колір: </h4>
+            <h2 id="cvet"></h2>
+        </div>
+
+        <div class="sch">
+            <h4>Ваш рахунок: </h4>
+            <h2 id="sc"></h2></div>
+
+    </div>
+
+    <div class="father">
+
+        <div class="top" id="a" onclick="javascript:kn0()">
+
+        </div>
+        <div class="bott">
+            <div class="bcde">
+                <div class="b" id="b" onclick="javascript:kn1()">
+
+                </div>
+                <div class="cde">
+                    <div class="c" id="c" onclick="javascript:kn2()"></div>
+                    <div class="d" id="d" onclick="javascript:kn3()"></div>
+                    <div class="e" id="e" onclick="javascript:kn4()"></div>
+                </div>
+
+            </div>
+
+            <div class="f" id="f" onclick="javascript:kn5()"></div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<script>
+    var schot = 0;
+    var i;
+    var knopka;
+
+    function game(){
+
+        var colorArray = ["black", "blue", "aqua", "blueviolet", "lime", "red", "grey", "purple", "yellow", "pink"];
+        var element = ["a", "b", "c", "d", "e", "f"];
+
+
+        var ranc1;
+
+        i = Math.floor(Math.random() * 6);
+        ranc1 = Math.floor(Math.random() * 10);
+        document.getElementById('cvet').innerHTML = colorArray[ranc1];
+        document.getElementById('sc').innerHTML = schot;
+        document.getElementById(element[i]).style.background = colorArray[ranc1];
+
+
+        let removed = colorArray.splice(ranc1, 1)
+
+        if (i === 0) {
+            document.getElementById('b').style.background = colorArray[0];
+            document.getElementById('c').style.background = colorArray[1];
+            document.getElementById('d').style.background = colorArray[2];
+            document.getElementById('e').style.background = colorArray[3];
+            document.getElementById('f').style.background = colorArray[4];
+
+        }
+
+        if (i === 1) {
+            document.getElementById('a').style.background = colorArray[4];
+            document.getElementById('c').style.background = colorArray[5];
+            document.getElementById('d').style.background = colorArray[6];
+            document.getElementById('e').style.background = colorArray[7];
+            document.getElementById('f').style.background = colorArray[8];
+
+        }
+
+        if (i === 2) {
+            document.getElementById('a').style.background = colorArray[0];
+            document.getElementById('b').style.background = colorArray[1];
+            document.getElementById('d').style.background = colorArray[2];
+            document.getElementById('e').style.background = colorArray[3];
+            document.getElementById('f').style.background = colorArray[4];
+
+        }
+
+        if (i === 3) {
+            document.getElementById('a').style.background = colorArray[4];
+            document.getElementById('b').style.background = colorArray[5];
+            document.getElementById('c').style.background = colorArray[6];
+            document.getElementById('e').style.background = colorArray[7];
+            document.getElementById('f').style.background = colorArray[8];
+
+        }
+
+        if (i === 4) {
+            document.getElementById('a').style.background = colorArray[0];
+            document.getElementById('b').style.background = colorArray[1];
+            document.getElementById('c').style.background = colorArray[2];
+            document.getElementById('d').style.background = colorArray[3];
+            document.getElementById('f').style.background = colorArray[4];
+
+        }
+        if (i === 5) {
+            document.getElementById('a').style.background = colorArray[4];
+            document.getElementById('b').style.background = colorArray[5];
+            document.getElementById('c').style.background = colorArray[6];
+            document.getElementById('d').style.background = colorArray[7];
+            document.getElementById('e').style.background = colorArray[8];
+
+        }
+
+
+    }
+
+    function kn0(){
+
+        knopka = 0;
+    if (knopka === i){
+        schot++;
+        document.getElementById('sc').innerHTML = schot;
+        game()
+    }
+
+    else {
+        schot--;
+        document.getElementById('sc').innerHTML = schot;
+        game()
+    }
+
+    }
+    function kn1(){
+
+        knopka = 1;
+        if (knopka === i){
+            schot++;
+            document.getElementById('sc').innerHTML = schot;
+            game()
+        }
+
+        else {
+            schot--;
+            document.getElementById('sc').innerHTML = schot;
+            game()
+        }
+
+    }
+    function kn2(){
+
+        knopka = 2;
+        if (knopka === i){
+            schot++;
+            document.getElementById('sc').innerHTML = schot;
+            game()
+        }
+
+        else {
+            schot--;
+            document.getElementById('sc').innerHTML = schot;
+            game()
+        }
+
+    }
+    function kn3(){
+
+        knopka = 3;
+        if (knopka === i){
+            schot++;
+            document.getElementById('sc').innerHTML = schot;
+            game()
+        }
+
+        else {
+            schot--;
+            document.getElementById('sc').innerHTML = schot;
+            game()
+        }
+
+    }
+    function kn4(){
+
+        knopka = 4;
+        if (knopka === i){
+            schot++;
+            document.getElementById('sc').innerHTML = schot;
+            game()
+        }
+
+        else {
+            schot--;
+            document.getElementById('sc').innerHTML = schot;
+            game()
+        }
+
+    }
+    function kn5(){
+
+        knopka = 5;
+        if (knopka === i){
+            schot++;
+            document.getElementById('sc').innerHTML = schot;
+            game()
+        }
+
+        else {
+            schot--;
+            document.getElementById('sc').innerHTML = schot;
+            game()
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

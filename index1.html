@@ -1,10 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home_work4.1</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-$END$
+<div class="father"id="fat">
+    <div class="first"id="fff">
+
+        <div>
+            <form action="javascript:changeColor()">
+                <button class="butt">Тицяй щоб поміняти колір</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="second"id="ggg">
+        <div class="f1">
+
+            <form action="javascript:changeloc()">
+                <button class="butt">Тицяй щоб поміняти місцями блоки</button>
+            </form>
+
+
+        </div>
+        <div class="f2">
+            <form action="index2.html">
+                <button class="butts">Наступна домашка</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+<script>
+    var colorArray = [ "#a0ff86", "#d76565", "#ffc641", "#ec41ff"]; // массив с цветами
+    var i = 0; // итератор
+    var n = 0;
+    var z = 0;
+    const se = '0.2s';
+    const sa = '1s';
+    const mr1 = '0px';
+    const mr2 = '10px';
+
+
+    function changeColor(){
+        document.getElementById('fff').style.background = colorArray[i];
+        i++;
+        if( i > colorArray.length - 1){
+            i = 0;
+        }
+
+    }
+
+    function changeloc() {
+        z++;
+        if (z === 1){
+        const zam = document.getElementById("fff");
+        const zam2 = document.getElementById("ggg");
+        document.getElementById('fat').insertBefore(zam2, zam);
+            document.getElementById('ggg').style.marginBottom = mr2;
+            document.getElementById('fff').style.marginBottom = mr1;
+        z++;
+        }
+
+        if (z === 3){
+            const zam = document.getElementById("fff");
+            const zam2 = document.getElementById("ggg");
+            document.getElementById('fat').insertBefore(zam, zam2);
+            document.getElementById('fff').style.animationDelay = se;
+            document.getElementById('fff').style.animationDirection = sa;
+            document.getElementById('ggg').style.marginBottom = mr1;
+            document.getElementById('fff').style.marginBottom = mr2;
+            z = 0;
+        }
+
+
+    }
+
+
+
+</script>
+
+
 </body>
 </html>
