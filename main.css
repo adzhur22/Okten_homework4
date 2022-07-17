@@ -117,7 +117,7 @@
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .second{
         flex-direction: column;
     }
@@ -166,7 +166,7 @@
 
 }
 
-@media screen and (min-width: 601px) and (max-width: 1100px) {
+@media screen and (min-width: 801px) and (max-width: 1100px) {
 
     .butts{
         width: 80%;
